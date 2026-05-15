@@ -1,8 +1,12 @@
-# Intermediate SQL - Sales Analysis
+# ContosoInsights 📊
+
+Customer behavior, retention, and lifetime value analysis for Microsoft Contoso DB - an e-commerce retail database.
 
 ## Overview
 
-Analysis of customer behavior, retention, and lifetime value for an e-commerce company to improve customer retention and maximize revenue.
+ContosoInsights provides data-driven analysis of customer behavior, retention patterns, and lifetime value for the Microsoft Contoso retail database. This project helps e-commerce companies improve customer retention, maximize revenue, and reduce churn through actionable insights.
+
+**Data Source:** Microsoft Contoso DB (sample retail database)
 
 ## Business Questions
 
@@ -32,14 +36,14 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 💡 **Business Insights**
 
-- High-Value (66% revenue): Offer premium membership program to 12,372 VIP customers, as losing one customer significantly impacts revenue
-- Mid-Value (32% revenue): Create upgrade paths through personalized promotions, with potential $66.6M → $135.4M revenue opportunity
-- Low-Value (2% revenue): Design re-engagement campaigns and price-sensitive promotions to increase purchase frequency
+- **High-Value (66% revenue):** Offer premium membership program to 12,372 VIP customers, as losing one customer significantly impacts revenue
+- **Mid-Value (32% revenue):** Create upgrade paths through personalized promotions, with potential $66.6M → $135.4M revenue opportunity
+- **Low-Value (2% revenue):** Design re-engagement campaigns and price-sensitive promotions to increase purchase frequency
 
 ### 2. Cohort Analysis
 
 - Tracked revenue and customer count per cohorts
-- Cohorts were grouped by year of first purchase
+- Cohorts were grouped by year of first purchase (using Contoso transaction data)
 - Analyzed customer retention at a cohort level
 
 🖥️ Query: [2_cohort_analysis.sql](/2_cohort_analysis.sql)
@@ -56,15 +60,15 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 💡 **Business Insights**
 
-- Value extracted from customers is decreasing over time and needs further investigation.
+- Value extracted from Contoso customers is decreasing over time and needs further investigation.
 - In 2023 we saw a drop in number of customers acquired, which is concerning.
-- With both lowering LTV and decreasing customer acquisition, the company is facing a potential revenue decline.
+- With both lowering LTV and decreasing customer acquisition, Contoso faces a potential revenue decline.
 
 ### 3. Customer Retention
 
 🖥️ Query: [3_retention_analysis.sql](3_retention_analysis.sql)
 
-- Identified customers at risk of churning
+- Identified customers at risk of churning from Contoso's retail platform
 - Analyzed last purchase patterns
 - Calculated customer-specific metrics
 
@@ -87,14 +91,14 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 ## Strategic Recommendations
 
 1. **Customer Value Optimization** (Customer Segmentation)
-   - Launch VIP program for 12,372 high-value customers (66% revenue)
+   - Launch VIP program for 12,372 high-value Contoso customers (66% revenue)
    - Create personalized upgrade paths for mid-value segment ($66.6M → $135.4M opportunity)
    - Design price-sensitive promotions for low-value segment to increase purchase frequency
 
 2. **Cohort Performance Strategy** (Customer Revenue by Cohort)
    - Target 2022-2024 cohorts with personalized re-engagement offers
    - Implement loyalty/subscription programs to stabilize revenue fluctuations
-   - Apply successful strategies from high-spending 2016-2018 cohorts to newer customers
+   - Apply successful strategies from high-spending 2016-2018 cohorts to newer Contoso customers
 
 3. **Retention & Churn Prevention** (Customer Retention)
    - Strengthen first 1-2 year engagement with onboarding incentives and loyalty rewards
@@ -103,6 +107,18 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 ## Technical Details
 
-- **Database:** PostgreSQL
-- **Analysis Tools:** PostgreSQL, DBeaver, PGadmin
+- **Database:** Microsoft Contoso DB (PostgreSQL)
+- **Analysis Tools:** PostgreSQL, DataGrip, PGadmin
 - **Visualization:** ChatGPT
+- **Data Source:** Microsoft Contoso sample retail database
+
+## About Contoso DB
+
+Contoso is Microsoft's sample retail database that simulates an e-commerce company selling products across multiple categories. It contains:
+
+- Customer transaction history
+- Product catalog and categories
+- Sales data over multiple years
+- Geographic customer distribution
+
+ContosoInsights transforms this raw data into actionable business intelligence for customer retention and revenue growth.
